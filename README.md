@@ -19,4 +19,3 @@ responder o robô, pois o mesmo só entende zeros e uns.
 
 ## Referência
 Filme "Animatrix".
-white and black
