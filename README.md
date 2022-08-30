@@ -16,4 +16,6 @@ de escolher o número decimal de sua preferência, convertê-lo para binário e 
 responder o robô, pois o mesmo só entende zeros e uns.
 
 
-Referências: Animatrix
+
+## Referências
+Filme "Animatrix".
