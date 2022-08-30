@@ -15,3 +15,5 @@ números nunca serão os mesmos, sendo que toda vez que o jogador for tomar uma 
 de escolher o número decimal de sua preferência, convertê-lo para binário e assim podendo
 responder o robô, pois o mesmo só entende zeros e uns.
 
+
+Referências: Animatrix
