@@ -18,6 +18,5 @@ responder o robô, pois o mesmo só entende zeros e uns.
 
 
 ## Referência
-Filme "Animatrix"
-
-KL O MITO
+Filme "Animatrix" 
+sal
