@@ -21,11 +21,11 @@ O jogo consistirá no jogador tentar sair de dentro do computador com o auxílio
 
 20 – Fazer X coisa;
 
-72 – Fazer Y coisa;
+36 – Fazer Y coisa;
 
-155 – Fazer Z coisa;
+60 – Fazer Z coisa;
 
-O robô dará essas opções ao jogador toda vez que for necessário uma tomada de decisão, porém os números nunca serão os mesmos, sendo que toda vez que o jogador for tomar uma decisão ele terá de escolher o número decimal de sua preferência, convertê-lo para binário e assim podendo
+O robô dará essas opções ao jogador toda vez que for necessário uma tomada de decisão, porém os números nunca serão os mesmos (podendo variar de 0 a 63), sendo que toda vez que o jogador for tomar uma decisão ele terá de escolher o número decimal de sua preferência, convertê-lo para binário e assim podendo
 responder o robô, pois o mesmo só entende zeros e uns.
 
 ## Conclusão da Ideia da aplicação
