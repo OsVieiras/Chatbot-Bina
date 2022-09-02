@@ -20,7 +20,7 @@ O jogo se ambientará dentro de um computador cheio de caminhos (circuito impres
 ![banner01-1-1920x650](https://user-images.githubusercontent.com/112506748/188223971-f24a6981-0489-42ac-a2fb-81f5a29258f1.jpg)
 
 ### **Ideia de personagem (Bina):**
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀![Captura de tela em 2022-09-02 16-26-29](https://user-images.githubusercontent.com/112506748/188223683-125b2633-ed8d-4bc2-a481-771f2db6812b.png)
+![Design sem nome](https://user-images.githubusercontent.com/112506748/188225295-3332e9ea-1c5b-40e3-8671-f02fb35c0c94.png)
 
 
 ## O Jogo
