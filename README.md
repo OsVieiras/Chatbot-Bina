@@ -12,6 +12,9 @@ Bina não responde a nenhum de seus comandos, o programador ainda tenta mudar as
 entende linguagem de programação pois não tem suporte para as linguagens, por isso a única forma
 de se comunicar com ele seria através do sistema binário, ou seja, zeros e uns.
 
+## Cenário e Personagens
+![isso é uma imagem] (https://thumbs.dreamstime.com/b/fundo-do-verde-da-placa-de-circuito-do-vetor-51453732.jpg)
+
 ## O Jogo
 O jogo consistirá no jogador tentar sair de dentro do computador com o auxílio do robô. Quando o
 robô se comunicar com ele, o jogador terá 3 ou 4 opções de escolha. As escolhas apareceram da
