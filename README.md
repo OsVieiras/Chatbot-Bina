@@ -13,7 +13,13 @@ entende linguagem de programação pois não tem suporte para as linguagens, por
 de se comunicar com ele seria através do sistema binário, ou seja, zeros e uns.
 
 ## Cenário e Personagens
-![isso é uma imagem] (https://thumbs.dreamstime.com/b/fundo-do-verde-da-placa-de-circuito-do-vetor-51453732.jpg)
+
+O jogo se ambientará dentro de um computador cheio de caminhos (circuito impresso) e o robô (Bina) ajudará o jogador a sair de dentro do mesmo dando a ele opções de escolha de qual caminho tomar.
+### **Ideia de cenário:**
+![fundo-do-verde-da-placa-de-circuito-do-vetor-51453732](https://user-images.githubusercontent.com/112506748/188222698-3d10eb89-13bf-46fa-a8e2-5b3bbf6b0331.jpg)
+### **Ideia de personagem (Bina):**
+![Captura de tela em 2022-09-02 16-26-29](https://user-images.githubusercontent.com/112506748/188223683-125b2633-ed8d-4bc2-a481-771f2db6812b.png)
+
 
 ## O Jogo
 O jogo consistirá no jogador tentar sair de dentro do computador com o auxílio do robô. Quando o
