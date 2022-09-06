@@ -1,5 +1,5 @@
 # Armazenar um número entre 0 e 255, por exemplo o número 120.
-numero = 120
+numero = 255
 
 # Subtraia o número por 128, se o resultado da operação for 0 ou superior então o primeiro bit é 1
 if (numero - 128) >= 0:
