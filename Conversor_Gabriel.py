@@ -57,6 +57,5 @@ if (numero - 1) >= 0:
 else:
     binário = binário + "0"
 
-
 print(numero)
 print(binário)
