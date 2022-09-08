@@ -32,12 +32,7 @@ responder o robô, pois o mesmo só entende zeros e uns.
 
 Consiste em um jogo interativo, com intuito educacional, além também de entreter e divertir o usuário. Faz com que o mesmo tenha de raciocinar para fazer as conversões decimais-binárias e tome as melhores decisões para fugir de dentro do computador.
 
-<<<<<<< HEAD
-## Referência
-Filme "Animatrix" 
-sau
-=======
 ## Referências
 
 Filme "Animatrix".
->>>>>>> fb9a44df6cbe9bbcc4e9d72a5aad5f3f9b9f82e1
+
