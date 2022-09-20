@@ -22,12 +22,14 @@ estados = {
         'proximos_estados': {
             'sim': 2,
             'não': 3
+            'reiniciar': 1
         }
     },
     2: {
         'frases': ['Era uma vez...', 'E lá de volta outra vez...'],
         'proximos_estados': {
             'não': 3
+            'reiniciar': 1
         }
     },
     3: {
