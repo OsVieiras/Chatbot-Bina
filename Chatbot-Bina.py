@@ -12,7 +12,7 @@ bot = commands.Bot(intents=intents, command_prefix='')
 # Dicionário com as definições da máquina de estados do jogo.
 estados = {
     0: {
-        'frases': ['Digite "iniciar" para começar o jogo e "reiniciar" caso queira voltar tudo do início.'],
+        'frases': ['Digite "iniciar" para começar o jogo e "reiniciar" ao fim caso queira voltar tudo do início.'],
         'proximos_estados': {
             'iniciar': 1
         }
@@ -22,14 +22,12 @@ estados = {
         'proximos_estados': {
             'sim': 2,
             'não': 3
-            'reiniciar': 1
         }
     },
     2: {
         'frases': ['Era uma vez...', 'E lá de volta outra vez...'],
         'proximos_estados': {
             'não': 3
-            'reiniciar': 1
         }
     },
     3: {
