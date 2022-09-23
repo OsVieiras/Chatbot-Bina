@@ -18,26 +18,55 @@ estados = {
         }
     },
     1: {
-        'frases': ['Olá!', 'Tudo bem, como vai?'],
+        'frases': ['Olá! Eu sou Bina seu assistente robô. Você foi "sugado" para dentro do seu computador enquanto trabalhava em um código. Minha missão é ajudá-lo a sair de dentro da máquina e para isso você terá 3 opções de saída: impressora, monitor ou alto-falante, mas primeiro preciso saber como você foi sugado. Para me responder você terá sempre de fazer conversões decimal-binária, pois meu interpretador está danificado. A respota deverá ter 8 bits (00000000) sendo ela o respectivo valor em binário da opção (X) escolhida. OPÇÃO (10) = teclado, OPÇÃO (15) = mouse, OPCÃO (20) = microfone.'],
         'proximos_estados': {
-            'sim': 2,
-            'não': 3,
+            '00001010': 2,
+            '00001111': 3,
+            '00010100': 4,
             'reiniciar': 1 
         }
     },
     2: {
-        'frases': ['Era uma vez...', 'E lá de volta outra vez...'],
+        'frases': ['Certo, como você foi sugado pro computador pelo teclado, eu recomendo sair do PC pela impressora, se desejar seguir esse rumo, OPCÃO (12) = sair pela impressora, caso não queira "reiniciar".'],
         'proximos_estados': {
-            'não': 3,
+            '00001100': 5,
             'reiniciar': 1
         }
     },
     3: {
-        'frases': ['Fim do jogo!', 'Parabéns!'],
+        'frases': ['Certo, como você foi sugado pro computador pelo mouse, eu recomendo sair do PC pelo monitor, se desejar seguir esse rumo, OPÇÃO (19) = sair pelo monitor, caso não queira "reiniciar".'],
+        'proximos_estados': {
+            '00010011': 6,
+            'reiniciar': 1
+        }       
+    },
+    4: {
+        'frases': ['Certo, como você foi sugado pro computador pelo microfone, eu recomendo sair do PC pelo alto-falante, se desejar seguir esse rumo, OPÇÃO (21) = sair pelo alto-falante, caso não queira "reiniciar".'],
+        'proximos_estados': {
+            '00010101': 7,
+            'reiniciar': 1
+        }
+    },
+    5: {
+        'frases': ['VOCÊ FOI IMPRESSO!'],
         'proximos_estados': {
             'reiniciar': 1
         }
-    }
+    },
+
+    6: {
+        'frases': ['VOCÊ FOI PIXELADO!'],
+        'proximos_estados': {
+            'reiniciar': 1
+        }
+    },
+    
+    7: {
+        'frases': ['VOCÊ FOI SONORIZADO!'],
+        'proximos_estados': {
+            'reiniciar': 1
+        }
+    },
 }
 
 # Dicionário com os estados correntes de cada jogador.
@@ -103,7 +132,7 @@ async def on_message(msg):
         else:
             #
             # Nos estados seguintes, a resposta padrão de HAL:
-            await msg.channel.send('I\'m sorry Dave, I\'m afraid I can\'t do that.')
+            await msg.channel.send('Desculpe, não entendi.')
 
 
 bot.run(getenv('DISCORD_TOKEN'))
