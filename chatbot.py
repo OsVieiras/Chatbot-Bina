@@ -46,6 +46,6 @@ async def on_message(msg):
     if partidas[autor]['estado'] == 0:
         await msg.channel.send(choice(estado_do_jogador['frases']))
     else:
-        await msg.channel.send('I\'m sorry Dave, I\'m afraid I can\'t do that.')
+        await msg.channel.send('Desculpe, não entendi.')
 
 bot.run(getenv('DISCORD_TOKEN'))
