@@ -1,10 +1,10 @@
-from definições import estados, partidas
+from definições import frases, estados, partidas
 import discord
 from discord.ext import commands
 from random import choice
 from re import fullmatch
-from datetime import datetime, timedelta
 from os import getenv
+from os.path import exists
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -20,32 +20,47 @@ async def on_ready():
 
 @bot.event
 async def on_message(msg):
-    autor = msg.author.id
-    if autor == bot.application_id:
+    # Testar se o autor é um bot (incluindo o próprio)
+    if msg.author.bot:
         return
+
+    autor = msg.author.id
     if autor not in partidas:
-        partidas[autor] = {'estado': 0, 'ultima_mensagem': msg.created_at}
+        # Jogador começa no estado 0 com duas chaves
+        partidas[autor] = {
+            'estado': 0,
+            'inventario': {
+                '1º Vida',
+                '2º Vida'
+            }
+        }
+
     estado_do_jogador = estados[partidas[autor]['estado']]
-    ultima_mensagem = partidas[autor]['ultima_mensagem']
+    inventario_do_jogador = partidas[autor]['inventario']
+
     for key, value in estado_do_jogador['proximos_estados'].items():
         if fullmatch(key, msg.content):
-            if estado_do_jogador['tempo_limite'] > 0:
-                delta = msg.created_at - ultima_mensagem
-                if delta.seconds > estado_do_jogador['tempo_limite']:
-                    partidas[autor] = {
-                        'estado': 1,
-                        'ultima_mensagem': msg.created_at
-                    }
-                    await msg.channel.send('Tempo limite estourado (' + str(estado_do_jogador['tempo_limite']) + 's). Reiniciando o jogo...')
-                    return
-            partidas[autor]['estado'] = value
-            partidas[autor]['ultima_mensagem'] = msg.created_at
-            estado_do_jogador = estados[partidas[autor]['estado']]
-            await msg.channel.send(choice(estado_do_jogador['frases']))
+            if inventario_do_jogador.issuperset(estados[value]['inventario']):
+                # Atualiza o estado do jogador
+                partidas[autor]['estado'] = value
+                
+                # Remove os itens de inventário requisitados
+                partidas[autor]['inventario'] = inventario_do_jogador.difference(
+                    estados[value]['inventario'])
+                
+                # Cria uma lista de frases usando o delimitador '|' e envia uma a uma
+                [await msg.channel.send(i) for i in choice(estados[value]['frases']).split('|')]
+                imagem = str(value) + '.png'
+                if exists(imagem):
+                    await msg.channel.send(file=discord.File(imagem))
+            else:
+                await msg.channel.send(frases['inventario_insuficiente'])
             return
+
     if partidas[autor]['estado'] == 0:
         await msg.channel.send(choice(estado_do_jogador['frases']))
     else:
-        await msg.channel.send('Desculpe, não entendi.')
+        await msg.channel.send(frases['erro'])
+
 
 bot.run(getenv('DISCORD_TOKEN'))
