@@ -5,7 +5,7 @@ frases = {
 
 estados = {
     0: {
-        'frases': ['Digite "iniciar" para começar o jogo e "reiniciar" caso queira voltar ao início.'],
+        'frases': ['Digite "iniciar" para começar o jogo e "reiniciar", caso queira voltar ao início.'],
         'proximos_estados': {
             '[iI]nicia(r)*': 1
         },
