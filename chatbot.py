@@ -30,8 +30,7 @@ async def on_message(msg):
         partidas[autor] = {
             'estado': 0,
             'inventario': {
-                '1º Vida',
-                '2º Vida'
+                'Vida',
             }
         }
 

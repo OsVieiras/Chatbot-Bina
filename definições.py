@@ -1,5 +1,5 @@
 frases = {
-    'inventario_insuficiente': 'Sem os recursos necessários para avançar.',
+    'inventario_insuficiente': 'Sem mais vidas.',
     'erro': 'Desculpe, não entendi.'
 }
 
@@ -91,11 +91,79 @@ estados = {
     },
 
     10: {
-        'frases': ['Você está indo muito bem! Faz as conversões tão rápido quanto eu, poderia até tomar o meu lugar e virar um robô se quisesse (risos robóticos malignos?!), mas claro estou apenas comentando. Você acabou de converter um IPV4, que muito provavelmente é o endereço privado do seu computador, guarde esse valor com você, pode ser útil para nós mais a frente.'],
+        'frases': ['Você está indo muito bem! Faz as conversões tão rápido quanto eu, poderia até tomar o meu lugar e virar um robô se quisesse (risos robóticos malignos?!), mas claro estou apenas comentando. Você acabou de converter um IPV4, que muito provavelmente é o endereço privado do seu computador, guarde esse valor com você, pode ser útil para nós mais a frente. Estão vindo mais bits em nossa direção, OPÇÃO (44) = desviar, OPÇÃO (33) = converter, OPÇÃO (22) = ignorar.'],
         'proximos_estados': {
+            '00101100': 11,
+            '00100001':12,
+            '00010110': 13,
             '[rR]einicia(r)*': 1
         },
         'inventario': {}
+    },
+
+    11: {
+        'frases': ['Você acabou de perder sua única vida. Você não conseguiu desviar de todos os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
+        'proximos_estados': {
+            '00100111': 14,
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {'Vida'}
+    },
+
+    12: {
+        'frases': ['Certo, faça a conversão, subtraia e retorne o valor ao usuário: 00010110 - 00001001'],
+        'proximos_estados': {
+            '15': 14,
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {}
+    },
+
+    13: {
+        'frases': ['Você acabou de perder sua única vida. Você ignorou os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
+        'proximos_estados': {
+            '00100111': 14,
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {'Vida'}
+    },
+
+    14: {
+        'frases': ['Vamos seguir nossa jornada e agora preciso perguntar novamente, pois chegamos a camada de enlace do computador e é aqui que você tomará um rumo diferente na história, escolha o componente pelo qual você deseja sair, pelo seu respectivo MAC address (Você pode copiar e colar o MAC do componente desejado). (00:1B:C9:4B:E3:57) = impressora, (02:4A:F8:4D:73:B7) = monitor, (44:F9:D2:4C:2F:8F) = alto-falante.'],
+        'proximos_estados': {
+            '00:1B:C9:4B:E3:57': 16,
+            '02:4A:F8:4D:73:B7': 17,
+            '44:F9:D2:4C:2F:8F': 18,
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {}
+    },
+
+    16: {
+        'frases': ['Você foi impresso!'],
+        'proximos_estados': {
+            
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {}
+    },
+
+    17: {
+        'frases': ['Você foi pixelado!'],
+        'proximos_estados': {
+            
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {'Vida'}
+    },
+
+    18: {
+        'frases': ['Você foi sonorizado!'],
+        'proximos_estados': {
+            
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {'Vida'}
     },
 
 }
