@@ -1,5 +1,5 @@
 frases = {
-    'inventario_insuficiente': 'Sem mais vidas.',
+    'inventario_insuficiente': 'Sem vida suficiente para seguir por esse caminho.',
     'erro': 'Desculpe, não entendi.'
 }
 
