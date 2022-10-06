@@ -53,6 +53,11 @@ async def on_message(msg):
                 imagem = str(value) + '.png'
                 if exists(imagem):
                     await msg.channel.send(file=discord.File(imagem))
+
+                gif = str(value) + '.gif'
+                if exists(gif):
+                    await msg.channel.send(file=discord.File(gif))
+
             else:
                 await msg.channel.send(frases['inventario_insuficiente'])
             return
