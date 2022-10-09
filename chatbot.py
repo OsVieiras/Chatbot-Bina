@@ -30,7 +30,10 @@ async def on_message(msg):
         partidas[autor] = {
             'estado': 0,
             'inventario': {
-                'Vida',
+                'Inteligência',
+                'Lógica',
+                'Esperteza',
+                'Rapidez',
             }
         }
 
@@ -43,6 +46,7 @@ async def on_message(msg):
                 # Atualiza o estado do jogador
                 partidas[autor]['estado'] = value
                 
+
                 # Remove os itens de inventário requisitados
                 partidas[autor]['inventario'] = inventario_do_jogador.difference(
                     estados[value]['inventario'])
@@ -65,6 +69,5 @@ async def on_message(msg):
         await msg.channel.send(choice(estado_do_jogador['frases']))
     else:
         await msg.channel.send(frases['erro'])
-
 
 bot.run(getenv('DISCORD_TOKEN'))

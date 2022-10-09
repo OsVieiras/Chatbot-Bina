@@ -1,5 +1,5 @@
 frases = {
-    'inventario_insuficiente': 'Sem vida suficiente para seguir por esse caminho.',
+    'inventario_insuficiente': 'Sem requisito para seguir esse caminho.',
     'erro': 'Desculpe, não entendi.'
 }
 
@@ -102,12 +102,12 @@ estados = {
     },
 
     11: {
-        'frases': ['Você acabou de perder sua única vida. Você não conseguiu desviar de todos os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
+        'frases': ['Você perdeu um dos requisitos necessários para avançar em fases adiantes (Rapidez). Você não conseguiu desviar de todos os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
         'proximos_estados': {
             '00100111': 14,
             '[rR]einicia(r)*': 1
         },
-        'inventario': {'Vida'}
+        'inventario': {'Rapidez'}
     },
 
     12: {
@@ -120,12 +120,12 @@ estados = {
     },
 
     13: {
-        'frases': ['Você acabou de perder sua única vida. Você ignorou os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
+        'frases': ['Você perdeu um dos requisitos necessários para avançar em fases adiantes (Inteligência). Você ignorou os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
         'proximos_estados': {
             '00100111': 14,
             '[rR]einicia(r)*': 1
         },
-        'inventario': {'Vida'}
+        'inventario': {'Inteligência'}
     },
 
     14: {
@@ -154,7 +154,7 @@ estados = {
             
             '[rR]einicia(r)*': 1
         },
-        'inventario': {'Vida'}
+        'inventario': {''}
     },
 
     18: {
@@ -163,7 +163,7 @@ estados = {
             
             '[rR]einicia(r)*': 1
         },
-        'inventario': {'Vida'}
+        'inventario': {'Inteligência'}
     },
 
 }
