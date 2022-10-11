@@ -46,7 +46,7 @@ estados = {
         'inventario': {}
     },
     5: {
-        'frases': ['Certo! Seguiremos o nosso caminho em direção a impressora, por aqui nós enfrentaremos alguns problemas. Nosso primeiro desafio será enfrentrar um trânsito de bits que estão seguindo rumo ao processador, temos que decodificar algumas sequências binárias que por ventura vierem em nossa direção, assim, nenhum dado será perdido por não ter conseguido chegar ao processador. Devemos fazer isso para não corrermos o risco de ser enviados para a assitência técnica por estar apresentando problemas, e acabar sendo formatados/apagados para sempre. OPÇÃO (27) = seguir.'],
+        'frases': ['Certo! Seguiremos o nosso caminho em direção a impressora, por aqui nós enfrentaremos alguns problemas. Nosso primeiro desafio será enfrentrar um trânsito de bits que estão seguindo rumo ao processador, temos que decodificar algumas sequências binárias que por ventura vierem em nossa direção, assim, nenhum dado será perdido por não ter conseguido chegar ao processador. Devemos fazer isso para não corrermos o risco de ser enviados para a assistência técnica por estar apresentando problemas, e acabar sendo formatados/apagados para sempre. OPÇÃO (27) = seguir.'],
         'proximos_estados': {
             '00011011': 8,
             '[rR]einicia(r)*': 1
