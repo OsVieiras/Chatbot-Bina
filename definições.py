@@ -1,5 +1,5 @@
 frases = {
-    'inventario_insuficiente': 'Sem requisito para seguir esse caminho.',
+    'inventario_insuficiente': 'Sem requisitos ou atribuições para seguir esse caminho.',
     'erro': 'Desculpe, não entendi.'
 }
 
@@ -82,26 +82,56 @@ estados = {
     },
 
     9: {
-        'frases': ['Por incrível que pareça, alguém estava somando 4 + 16 na calculadora, quem tem acesso ao seu computador? Eu até ia rir disso, mas sou um robô. Bem vamos seguir. Logo a frente temos um endereço IPV4 vindo em nossa direção, vamos convertê-lo e enviá-lo ao processador. CONVERTA: 192.168.36.15'],
+        'frases': ['Por incrível que pareça, alguém estava somando 4 + 16 na calculadora, quem tem acesso ao seu computador? Eu até ia rir disso, mas sou um robô. Bem vamos seguir. Logo a frente temos um endereço IPV4 vindo em nossa direção, vamos convertê-lo e enviá-lo ao processador. CONVERTA 192.168.36.15, caso queira tentar desviar dos bits OPÇÃO (48), ou então ignorar os bits (53).'],
         'proximos_estados': {
             '11000000.10101000.00100100.00001111': 10,
+            '00110000': 11,
+            '00110101': 12,
+
             '[rR]einicia(r)*': 1
         },
         'inventario': {}
     },
 
     10: {
-        'frases': ['Você está indo muito bem! Faz as conversões tão rápido quanto eu, poderia até tomar o meu lugar e virar um robô se quisesse (risos robóticos malignos?!), mas claro estou apenas comentando. Você acabou de converter um IPV4, que muito provavelmente é o endereço privado do seu computador, guarde esse valor com você, pode ser útil para nós mais a frente. Estão vindo mais bits em nossa direção, OPÇÃO (44) = desviar, OPÇÃO (33) = converter, OPÇÃO (22) = ignorar.'],
+        'frases': ['Você está indo muito bem! Faz as conversões tão rápido quanto eu, poderia até tomar o meu lugar e virar um robô se quisesse (risos robóticos malignos?!), mas claro estou apenas comentando. Você acabou de converter um IPV4, que muito provavelmente é o endereço privado do seu computador, guarde esse valor com você, pode ser útil para nós mais a frente. OPÇÃO (4) = Seguir.'],
         'proximos_estados': {
-            '00101100': 11,
-            '00100001':12,
-            '00010110': 13,
+            '00000100': 13,
+            '[iI]nicia(r)*': 1
+        },
+        'inventario': {}        
+    },
+    11: {
+        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente, isso pode acabar limitando suas opções no futuro. Além disso você perdeu um requisito (Rapidez) por ser devagar demais ao tentar desviar dos bits. OPÇÃO (4) = Seguir.'],
+        'proximos_estados': {
+            '00000100': 13,
+            '[iI]nicia(r)*': 1
+        },
+        'inventario': {'Rapidez'}        
+    },
+
+    12: {
+        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente, isso pode acabar limitando suas opções no futuro. Além disso você perdeu um requisito (Inteligência) por ser burro demais ao achar que poderiaiignorar os bits e sair ileso. OPÇÃO (4) = Seguir.'],
+        'proximos_estados': {
+            '00000100': 13,
+            '[iI]nicia(r)*': 1
+        },
+        'inventario': {'Inteligência'}        
+    },
+
+    13: {
+        'frases': ['Estão vindo mais bits em nossa direção, OPÇÃO (44) = desviar, OPÇÃO (33) = converter, OPÇÃO (22) = ignorar.'],
+        'proximos_estados': {
+            '00101100': 14,
+            '00100001':15,
+            '00010110': 16,
             '[rR]einicia(r)*': 1
         },
         'inventario': {}
     },
 
-    11: {
+
+    14: {
         'frases': ['Você perdeu um dos requisitos necessários para avançar em fases adiantes (Rapidez). Você não conseguiu desviar de todos os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
         'proximos_estados': {
             '00100111': 14,
@@ -110,60 +140,60 @@ estados = {
         'inventario': {'Rapidez'}
     },
 
-    12: {
+    15: {
         'frases': ['Certo, faça a conversão, subtraia e retorne o valor ao usuário: 00010110 - 00001001'],
         'proximos_estados': {
-            '15': 14,
-            '[rR]einicia(r)*': 1
-        },
-        'inventario': {}
-    },
-
-    13: {
-        'frases': ['Você perdeu um dos requisitos necessários para avançar em fases adiantes (Inteligência). Você ignorou os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
-        'proximos_estados': {
-            '00100111': 14,
-            '[rR]einicia(r)*': 1
-        },
-        'inventario': {'Inteligência'}
-    },
-
-    14: {
-        'frases': ['Vamos seguir nossa jornada e agora preciso perguntar novamente, pois chegamos a camada de enlace do computador e é aqui que você tomará um rumo diferente na história, escolha o componente pelo qual você deseja sair, pelo seu respectivo MAC address (Você pode copiar e colar o MAC do componente desejado). (00:1B:C9:4B:E3:57) = impressora, (02:4A:F8:4D:73:B7) = monitor, (44:F9:D2:4C:2F:8F) = alto-falante.'],
-        'proximos_estados': {
-            '00:1B:C9:4B:E3:57': 16,
-            '02:4A:F8:4D:73:B7': 17,
-            '44:F9:D2:4C:2F:8F': 18,
+            '13': 17,
             '[rR]einicia(r)*': 1
         },
         'inventario': {}
     },
 
     16: {
-        'frases': ['Você foi impresso!'],
+        'frases': ['Você perdeu um dos requisitos necessários para avançar em fases adiantes (Inteligência). Você ignorou os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
         'proximos_estados': {
-            
+            '00100111': 17,
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {'Inteligência'}
+    },
+
+    17: {
+        'frases': ['Vamos seguir nossa jornada e agora preciso perguntar novamente, pois chegamos a camada de enlace do computador e é aqui que você tomará um rumo diferente na história, escolha o componente pelo qual você deseja sair, pelo seu respectivo MAC address (Você pode copiar e colar o MAC do componente desejado). (00:1B:C9:4B:E3:57) = impressora, (02:4A:F8:4D:73:B7) = monitor, (44:F9:D2:4C:2F:8F) = alto-falante.'],
+        'proximos_estados': {
+            '00:1B:C9:4B:E3:57': 18,
+            '02:4A:F8:4D:73:B7': 19,
+            '44:F9:D2:4C:2F:8F': 20,
             '[rR]einicia(r)*': 1
         },
         'inventario': {}
     },
 
-    17: {
+    18: {
+        'frases': ['Você foi impresso!'],
+        'proximos_estados': {
+            
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {'IP do PC: 192.168.36.15'}
+    },
+
+    19: {
         'frases': ['Você foi pixelado!'],
         'proximos_estados': {
             
             '[rR]einicia(r)*': 1
         },
-        'inventario': {''}
+        'inventario': {'IP do PC: 192.168.36.15'}
     },
 
-    18: {
+    20: {
         'frases': ['Você foi sonorizado!'],
         'proximos_estados': {
             
             '[rR]einicia(r)*': 1
         },
-        'inventario': {'Inteligência'}
+        'inventario': {''}
     },
 
 }

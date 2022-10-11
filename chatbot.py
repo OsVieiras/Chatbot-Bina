@@ -61,9 +61,20 @@ async def on_message(msg):
                 if exists(gif):
                     await msg.channel.send(file=discord.File(gif))
 
+                #Adiciona itens/atribuições ao inventário do jogador
+                if partidas[autor]['estado'] ==10:
+                        partidas[autor]['inventario'].add('IP do PC: 192.168.36.15')
+
+                if len(inventario_do_jogador) > 0:
+                    await msg.channel.send('Inventário:')
+                    for item in inventario_do_jogador:
+                        await msg.channel.send('● ' + item)
+
             else:
                 await msg.channel.send(frases['inventario_insuficiente'])
             return
+
+
 
     if partidas[autor]['estado'] == 0:
         await msg.channel.send(choice(estado_do_jogador['frases']))
