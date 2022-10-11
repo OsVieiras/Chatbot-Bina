@@ -73,7 +73,7 @@ estados = {
     },
 
     8: {
-        'frases': ['BITS ESTÃO VINDO EM NOSSA DIREÇÃO!!! CONVERTÁ-OS, SOME-OS E ENVIE O VALOR DA SOMA AO USUÁRIO: 00000100 + 00010000'],
+        'frases': ['BITS ESTÃO VINDO EM NOSSA DIREÇÃO!!! CONVERTÁ-OS, SOME-OS E ENVIE O VALOR DA SOMA AO USUÁRIO (EM DECIMAL): 00000100 + 00010000'],
         'proximos_estados': {
             '20': 9,
             '[rR]einicia(r)*': 1
