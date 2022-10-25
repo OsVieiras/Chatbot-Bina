@@ -170,8 +170,9 @@ estados = {
     },
 
     18: {
-        'frases': ['Você foi impresso!'],
+        'frases': ['Seguiremos nosso caminho pela impressora, para seguir este caminho foi lhe solicitado o IP do PC.'],
         'proximos_estados': {
+            '': 21,
             
             '[rR]einicia(r)*': 1
         },
@@ -179,16 +180,26 @@ estados = {
     },
 
     19: {
-        'frases': ['Você foi pixelado!'],
+        'frases': ['Seguiremos nosso caminho pelo monitor. '],
         'proximos_estados': {
+            '': 22,
             
             '[rR]einicia(r)*': 1
         },
-        'inventario': {'IP do PC: 192.168.36.15'}
+        'inventario': {''}
     },
 
     20: {
-        'frases': ['Você foi sonorizado!'],
+        'frases': ['Seguiremos nosso camimho pelo alto-falante'],
+        'proximos_estados': {
+            '': 23,
+            
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {''}
+    },
+    21: {
+        'frases': [''],
         'proximos_estados': {
             
             '[rR]einicia(r)*': 1
@@ -196,5 +207,22 @@ estados = {
         'inventario': {''}
     },
 
+    22: {
+        'frases': [''],
+        'proximos_estados': {
+            
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {''}
+    },
+
+    23: {
+        'frases': [''],
+        'proximos_estados': {
+            
+            '[rR]einicia(r)*': 1
+        },
+        'inventario': {''}
+    },
 }
 partidas = {}
