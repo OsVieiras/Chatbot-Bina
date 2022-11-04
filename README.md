@@ -8,12 +8,8 @@ Um programador entra em estado de transi após uma jornada de mais de 24 horas p
 
 O jogo se ambientará dentro de um computador cheio de caminhos (circuito impresso/como um labirinto) e o robô (Bina) ajudará o jogador a sair de dentro do mesmo, dando a ele opções de escolha de qual caminho tomar. O personagem principal será o próprio jogador.
 
-### **Ideia de cenário:**
-![banner01-1-1920x650](https://user-images.githubusercontent.com/112506748/188223971-f24a6981-0489-42ac-a2fb-81f5a29258f1.jpg)
-
 ### **Ideia de personagem - robô (Bina):**
 ![Design sem nome](https://user-images.githubusercontent.com/112506748/188225295-3332e9ea-1c5b-40e3-8671-f02fb35c0c94.png)
-
 
 ## O Jogo
 
