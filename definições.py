@@ -1,5 +1,8 @@
 frases = {
-    'inventario_insuficiente': 'Sem requisitos ou atribuições para seguir esse caminho.',
+
+    'inventario_insuficiente': 'Sem os recursos necessários para avançar.',
+    'canal_privado': 'Por favor, envie mensagens para mim através de canal compartilhado de texto (não pvt).',
+    'sem_canal_de_voz': 'Por favor, esteja em um canal de voz para ter a imersão necessária do jogo.',
     'erro': 'Desculpe, não entendi.'
 }
 
