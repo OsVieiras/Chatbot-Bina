@@ -1,7 +1,7 @@
 frases = {
-
-    'inventario_insuficiente': 'Sem os recursos necessários para avançar.',
-    'canal_privado': 'Por favor, envie mensagens para mim através de canal compartilhado de texto (não pvt).',
+    'reiniciado': 'Jogo reiniciado (progresso do jogador apagado).',
+    'saindo': 'Daisy\nDaisy',
+    'canal_privado': 'Não é possível reproduzir áudio em canais privados.',
     'sem_canal_de_voz': 'Por favor, esteja em um canal de voz para ter a imersão necessária do jogo.',
     'erro': 'Desculpe, não entendi.'
 }
@@ -228,4 +228,4 @@ estados = {
         'inventario': {''}
     },
 }
-partidas = {}
+canais_de_voz = {}
