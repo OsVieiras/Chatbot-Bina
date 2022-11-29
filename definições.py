@@ -1,5 +1,4 @@
 frases = {
-    'inventario_insuficiente': 'Sem os recursos necessários para avançar',
     'reiniciado': 'Jogo reiniciado (progresso do jogador apagado).',
     'saindo': 'Daisy\nDaisy',
     'canal_privado': 'Não é possível reproduzir áudio em canais privados.',
@@ -9,7 +8,7 @@ frases = {
 
 estados = {
     0: {
-        'frases': ['Digite "iniciar" para começar o jogo e "reiniciar", caso queira voltar ao início.'],
+        'frases': ['Digite "iniciar" para começar o jogo e "reiniciar" para apagar todo o progresso e voltar do início.'],
         'proximos_estados': {
             '[iI]nicia(r)*': 1
         },
@@ -20,69 +19,61 @@ estados = {
         'proximos_estados': {
             '00001010': 2,
             '00001111': 3,
-            '00010100': 4,
-            '[rR]einicia(r)*': 1 
+            '00010100': 4, 
         },
-        'inventario': {}
+
     },
     2: {
         'frases': ['Certo, como você foi sugado pro computador pelo teclado, eu recomendo sair do PC pela impressora, se desejar seguir esse rumo, OPCÃO (12) = sair pela impressora, caso não queira "reiniciar".'],
         'proximos_estados': {
             '00001100': 5,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
     3: {
         'frases': ['Certo, como você foi sugado pro computador pelo mouse, eu recomendo sair do PC pelo monitor, se desejar seguir esse rumo, OPÇÃO (19) = sair pelo monitor, caso não queira "reiniciar".'],
         'proximos_estados': {
             '00010011': 6,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}       
+
     },
     4: {
         'frases': ['Certo, como você foi sugado pro computador pelo microfone, eu recomendo sair do PC pelo alto-falante, se desejar seguir esse rumo, OPÇÃO (21) = sair pelo alto-falante, caso não queira "reiniciar".'],
         'proximos_estados': {
             '00010101': 7,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
     5: {
         'frases': ['Certo! Seguiremos o nosso caminho em direção a impressora, por aqui nós enfrentaremos alguns problemas. Nosso primeiro desafio será enfrentrar um trânsito de bits que estão seguindo rumo ao processador, temos que decodificar algumas sequências binárias que por ventura vierem em nossa direção, assim, nenhum dado será perdido por não ter conseguido chegar ao processador. Devemos fazer isso para não corrermos o risco de ser enviados para a assistência técnica por estar apresentando problemas, e acabar sendo formatados/apagados para sempre. OPÇÃO (27) = seguir.'],
         'proximos_estados': {
             '00011011': 8,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
 
     6: {
         'frases': ['Certo! Seguiremos o nosso caminho em direção ao monitor, por aqui nós enfrentaremos alguns problemas. Nosso primeiro desafio será enfrentrar um trânsito de bits que estão seguindo rumo ao processador, temos que decodificar algumas sequências binárias que por ventura vierem em nossa direção, assim, nenhum dado será perdido por não ter conseguido chegar ao processador. Devemos fazer isso para não corrermos o risco de ser enviados para a assitência técnica por estar apresentando problemas, e acabar sendo formatados/apagados para sempre. OPÇÃO (27) = seguir.'],
         'proximos_estados': {
             '00011011': 8,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
     
     7: {
         'frases': ['Certo! Seguiremos o nosso caminho em direção ao alto-falante, por aqui nós enfrentaremos alguns problemas. Nosso primeiro desafio será enfrentrar um trânsito de bits que estão seguindo rumo ao processador, temos que decodificar algumas sequências binárias que por ventura vierem em nossa direção, assim, nenhum dado será perdido por não ter conseguido chegar ao processador. Devemos fazer isso para não corrermos o risco de ser enviados para a assitência técnica por estar apresentando problemas, e acabar sendo formatados/apagados para sempre. OPÇÃO (27) = seguir.'],
         'proximos_estados': {
             '00011011': 8,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
 
     8: {
         'frases': ['BITS ESTÃO VINDO EM NOSSA DIREÇÃO!!! CONVERTÁ-OS, SOME-OS E ENVIE O VALOR DA SOMA AO USUÁRIO (EM DECIMAL): 00000100 + 00010000'],
         'proximos_estados': {
             '20': 9,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
 
     9: {
@@ -91,36 +82,31 @@ estados = {
             '11000000.10101000.00100100.00001111': 10,
             '00110000': 11,
             '00110101': 12,
-
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
 
     10: {
         'frases': ['Você está indo muito bem! Faz as conversões tão rápido quanto eu, poderia até tomar o meu lugar e virar um robô se quisesse (risos robóticos malignos?!), mas claro estou apenas comentando. Você acabou de converter um IPV4, que muito provavelmente é o endereço privado do seu computador, guarde esse valor com você, pode ser útil para nós mais a frente. OPÇÃO (4) = Seguir.'],
         'proximos_estados': {
             '00000100': 13,
-            '[iI]nicia(r)*': 1
         },
-        'inventario': {}        
+
     },
     11: {
-        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente, isso pode acabar limitando suas opções no futuro. Além disso você perdeu um requisito (Rapidez) por ser devagar demais ao tentar desviar dos bits. OPÇÃO (4) = Seguir.'],
+        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente (IP do PC), isso pode acabar limitando suas opções no futuro. OPÇÃO (4) = Seguir.'],
         'proximos_estados': {
             '00000100': 13,
-            '[iI]nicia(r)*': 1
         },
-        'inventario': {'Rapidez'}        
+
     },
 
     12: {
-        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente, isso pode acabar limitando suas opções no futuro. Além disso você perdeu um requisito (Inteligência) por ser burro demais ao achar que poderiaiignorar os bits e sair ileso. OPÇÃO (4) = Seguir.'],
+        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente (IP do PC), isso pode acabar limitando suas opções no futuro. OPÇÃO (4) = Seguir.'],
         'proximos_estados': {
             '00000100': 13,
-            '[iI]nicia(r)*': 1
         },
-        'inventario': {'Inteligência'}        
+
     },
 
     13: {
@@ -129,37 +115,34 @@ estados = {
             '00101100': 14,
             '00100001':15,
             '00010110': 16,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
 
 
     14: {
-        'frases': ['Você perdeu um dos requisitos necessários para avançar em fases adiantes (Rapidez). Você não conseguiu desviar de todos os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
+        'frases': ['Você não conseguiu desviar de todos os bits que estavam vindos em sua direção e o computador apresentou falhas, se continuar fazendo besteiras iremos para a manutenção. OPÇÃO (39) = seguir.'],
         'proximos_estados': {
             '00100111': 14,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {'Rapidez'}
+
     },
 
     15: {
         'frases': ['Certo, faça a conversão, subtraia e retorne o valor ao usuário: 00010110 - 00001001'],
         'proximos_estados': {
             '13': 17,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
 
     16: {
-        'frases': ['Você perdeu um dos requisitos necessários para avançar em fases adiantes (Inteligência). Você ignorou os bits que estavam vindos em sua direção e o computador apresentou falhas, agora suas opções de escolha para seguir diferentes rumos estão limitadas. OPÇÃO (39) = seguir.'],
+        'frases': ['Você ignorou os bits que estavam vindos em sua direção e o computador apresentou falhas, mais uma dessa e estamos fritos. OPÇÃO (39) = seguir.'],
         'proximos_estados': {
             '00100111': 17,
-            '[rR]einicia(r)*': 1
+
         },
-        'inventario': {'Inteligência'}
+
     },
 
     17: {
@@ -168,65 +151,52 @@ estados = {
             '00:1B:C9:4B:E3:57': 18,
             '02:4A:F8:4D:73:B7': 19,
             '44:F9:D2:4C:2F:8F': 20,
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {}
+
     },
 
     18: {
-        'frases': ['Seguiremos nosso caminho pela impressora, para seguir este caminho foi lhe solicitado o IP do PC.'],
+        'frases': ['Seguiremos nosso caminho pela impressora. Está sendo solicitado o IP do PC para seguir por esse caminho, você lembra dele? Se sim, responda o respectivo valor do mesmo para avançar.'],
         'proximos_estados': {
-            '': 21,
-            
-            '[rR]einicia(r)*': 1
+            '192.168.36.15': 21,
         },
-        'inventario': {'IP do PC: 192.168.36.15'}
+
     },
 
     19: {
         'frases': ['Seguiremos nosso caminho pelo monitor. '],
         'proximos_estados': {
             '': 22,
-            
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {''}
+
     },
 
     20: {
-        'frases': ['Seguiremos nosso camimho pelo alto-falante'],
+        'frases': ['Seguiremos nosso camimho pelo alto-falante. Está sendo solicitado o IP do PC para seguir por esse caminho, você lembra dele? Se sim, responda o respectivo valor do mesmo para avançar.'],
         'proximos_estados': {
-            '': 23,
-            
-            '[rR]einicia(r)*': 1
+            '192.168.36.15': 23,
         },
-        'inventario': {''}
+
     },
     21: {
         'frases': [''],
         'proximos_estados': {
-            
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {''}
+
     },
 
     22: {
         'frases': [''],
         'proximos_estados': {
-            
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {''}
+
     },
 
     23: {
         'frases': [''],
         'proximos_estados': {
-            
-            '[rR]einicia(r)*': 1
         },
-        'inventario': {''}
+
     },
 }
 canais_de_voz = {}
