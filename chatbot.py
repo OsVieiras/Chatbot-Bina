@@ -69,7 +69,7 @@ async def on_message(msg):
     if partidas_db.count_documents({'jogador': autor}) == 0:
         #
         # Jogador começa no estado 0 e inventário vazio
-        partidas_db.insert_one({'jogador': autor, 'estado': 0})
+        partidas_db.insert_one({'jogador': autor, 'estado': 0,})
     #
     # Coletar os dados persistentes de usuário
     partida = partidas_db.find_one({'jogador': autor})

@@ -1,4 +1,5 @@
 frases = {
+    'inventario_insuficiente': 'Sem os recursos necessários para avançar',
     'reiniciado': 'Jogo reiniciado (progresso do jogador apagado).',
     'saindo': 'Daisy\nDaisy',
     'canal_privado': 'Não é possível reproduzir áudio em canais privados.',
