@@ -164,9 +164,9 @@ estados = {
     },
 
     19: {
-        'frases': ['Seguiremos nosso caminho pelo monitor. '],
+        'frases': ['VOCÊ FOI PIXELADO! (Reiniciar)'],
         'proximos_estados': {
-            '': 22,
+            'Reiniciar': 0,
         },
 
     },
@@ -174,7 +174,7 @@ estados = {
     20: {
         'frases': ['Seguiremos nosso camimho pelo alto-falante. Está sendo solicitado o IP do PC para seguir por esse caminho, você lembra dele? Se sim, responda o respectivo valor do mesmo para avançar.'],
         'proximos_estados': {
-            '192.168.36.15': 23,
+            '192.168.36.15': 22,
         },
 
     },
@@ -186,13 +186,6 @@ estados = {
     },
 
     22: {
-        'frases': [''],
-        'proximos_estados': {
-        },
-
-    },
-
-    23: {
         'frases': [''],
         'proximos_estados': {
         },
