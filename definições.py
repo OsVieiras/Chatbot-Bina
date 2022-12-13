@@ -69,15 +69,15 @@ estados = {
     },
 
     8: {
-        'frases': ['BITS ESTÃO VINDO EM NOSSA DIREÇÃO!!! CONVERTÁ-OS, SOME-OS E ENVIE O VALOR DA SOMA AO USUÁRIO (EM DECIMAL): 00000100 + 00010000'],
+        'frases': ['BITS ESTÃO VINDO EM NOSSA DIREÇÃO!!! CONVERTA, SUBTRAIA E ENVIE O VALOR DA SUBTRAÇÃO AO USUÁRIO (EM DECIMAL): 00000100 - 00000100'],
         'proximos_estados': {
-            '20': 9,
+            '0': 9,
         },
 
     },
 
     9: {
-        'frases': ['Por incrível que pareça, alguém estava somando 4 + 16 na calculadora, quem tem acesso ao seu computador? Eu até ia rir disso, mas sou um robô. Bem vamos seguir. Logo a frente temos um endereço IPV4 vindo em nossa direção, vamos convertê-lo e enviá-lo ao processador. CONVERTA 192.168.36.15, caso queira tentar desviar dos bits OPÇÃO (48), ou então ignorar os bits (53).'],
+        'frases': ['Por incrível que pareça, alguém estava subtraindo 16 - 16 na calculadora, quem tem acesso ao seu computador? Eu até ia rir disso, mas sou um robô. Bem vamos seguir. Logo a frente temos um endereço IPV4 vindo em nossa direção, vamos convertê-lo e enviá-lo ao processador. CONVERTA 192.168.36.15, caso queira tentar desviar dos bits OPÇÃO (48), ou então ignorar os bits (53).'],
         'proximos_estados': {
             '11000000.10101000.00100100.00001111': 10,
             '00110000': 11,
@@ -94,7 +94,7 @@ estados = {
 
     },
     11: {
-        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente (IP do PC), isso pode acabar limitando suas opções no futuro. OPÇÃO (4) = Seguir.'],
+        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente (IP do PC em binário), isso pode acabar limitando suas opções no futuro. OPÇÃO (4) = Seguir.'],
         'proximos_estados': {
             '00000100': 13,
         },
@@ -102,7 +102,7 @@ estados = {
     },
 
     12: {
-        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente (IP do PC), isso pode acabar limitando suas opções no futuro. OPÇÃO (4) = Seguir.'],
+        'frases': ['Você deixou para trás uma informação que pode ser útil mais a frente (IP do PC em binário), isso pode acabar limitando suas opções no futuro. OPÇÃO (4) = Seguir.'],
         'proximos_estados': {
             '00000100': 13,
         },
@@ -156,40 +156,30 @@ estados = {
     },
 
     18: {
-        'frases': ['Seguiremos nosso caminho pela impressora. Está sendo solicitado o IP do PC para seguir por esse caminho, você lembra dele? Se sim, responda o respectivo valor do mesmo para avançar.'],
+        'frases': ['VOCÊ FOI IMPRESSO! (Reiniciar'],
         'proximos_estados': {
-            '192.168.36.15': 21,
+            'Restart': 0,
         },
 
     },
 
     19: {
-        'frases': ['VOCÊ FOI PIXELADO! (Reiniciar)'],
+        'frases': ['Seguiremos nosso caminho pelo monitor. Está sendo solicitado o IP do PC (em binário) para seguir por esse caminho, você lembra dele? Se sim, responda o respectivo valor do mesmo para avançar.'],
         'proximos_estados': {
-            'Reiniciar': 0,
+            '11000000.10101000.00100100.00001111': 21,
         },
 
     },
 
     20: {
-        'frases': ['Seguiremos nosso camimho pelo alto-falante. Está sendo solicitado o IP do PC para seguir por esse caminho, você lembra dele? Se sim, responda o respectivo valor do mesmo para avançar.'],
+        'frases': ['VOCÊ FOI SONORIZADO!'],
         'proximos_estados': {
-            '192.168.36.15': 22,
+            'Restart': 0,
         },
 
     },
     21: {
-        'frases': [''],
-        'proximos_estados': {
-        },
-
-    },
-
-    22: {
-        'frases': [''],
-        'proximos_estados': {
-        },
-
+        'frases': ['Ao tomar a decisão de seguir pelo monitor, o robô Bina mostra verdadeiramente quem é e mata o jogador... Porém, ele acorda e percebe que tudo não passou de um sonho. Ao ligar seu computador no dia seguinte para trabalhar, se depara com um novo papel de parede em seu monitor:'],
     },
 }
 canais_de_voz = {}
