@@ -156,7 +156,7 @@ estados = {
     },
 
     18: {
-        'frases': ['VOCÊ FOI IMPRESSO! (Reiniciar'],
+        'frases': ['VOCÊ FOI IMPRESSO! (Reiniciar)'],
         'proximos_estados': {
             'Restart': 0,
         },
@@ -172,7 +172,7 @@ estados = {
     },
 
     20: {
-        'frases': ['VOCÊ FOI SONORIZADO!'],
+        'frases': ['VOCÊ FOI SONORIZADO! (Reiniciar)'],
         'proximos_estados': {
             'Restart': 0,
         },
